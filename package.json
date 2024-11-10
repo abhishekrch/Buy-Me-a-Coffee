@@ -22,8 +22,8 @@
     "next": "15.0.2",
     "next-auth": "^4.24.10",
     "parse-full-name": "^1.2.6",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react": "18",
+    "react-dom": "18",
     "react-hot-toast": "^2.4.1",
     "uniqid": "^5.4.0"
   },
