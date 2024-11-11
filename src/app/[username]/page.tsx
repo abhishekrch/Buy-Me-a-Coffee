@@ -4,18 +4,19 @@ import DonationForm from "@/components/DonationForm";
 import { ProfileInfo, ProfileInfoModel } from "@/models/ProfileInfo";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { profileEnd } from "console";
+// import { profileEnd } from "console";
 import mongoose from "mongoose";
 import Image from "next/image";
 
+
 type Props = {
-    params: {
+    params: Promise<{
         username: string;
-    };
+    }>;
 }
 
 export default async function SingleProfilePage({params}:Props) {
-    const  username = params.username;
+    const { username } = await params;
     await mongoose.connect(process.env.MONGODB_URI as string);
     const profileInfoDoc:ProfileInfo|null = await ProfileInfoModel.findOne({username});
 

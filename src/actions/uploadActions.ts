@@ -18,7 +18,7 @@ export async function uploadToS3(formData: FormData) {
     const newFilename = uniqid() + '.'+ ext;
 
     const chunks = [];
-    //@ts-ignore
+    // @ts-expect-error: fix this later
     for await (const chunk of file.stream()) {
         chunks.push(chunk);
     }

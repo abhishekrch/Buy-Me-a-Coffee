@@ -7,6 +7,6 @@ export async function createDonation(formData: FormData): Promise<string> {
     const donationDoc = await DonationModel.create({
         amount, name, message, crypto
     });
-    return '';
+    return donationDoc._id.toString();
     
 }

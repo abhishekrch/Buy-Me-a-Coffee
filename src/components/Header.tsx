@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugHot, faUser } from "@fortawesome/free-solid-svg-icons";
-import { signIn, signOut } from "next-auth/react";
+import { faMugHot } from "@fortawesome/free-solid-svg-icons";
+import { signIn } from "next-auth/react";
 import { Session } from "next-auth";
 import {parseFullName} from 'parse-full-name';
 import Image from "next/image";
